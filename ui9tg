@@ -1,0 +1,36 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    int a[30][30],i,j,n=0,m=0,p;
+    bool equal;
+    ifstream in("input.txt");
+    cin>>n;
+    cin>>m;
+
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++){
+
+            in>>a[i][j];
+        }
+    }
+    in.close();
+    for(j=0;j<m;j++){
+        for(i=0;i<n/2+1;i++){
+            if(a[i][j] == a[n-i][j]){
+                equal= true;
+            }else{break;
+            equal = false;}
+        }
+
+
+        }
+    }
+
+    if(equal == true){
+        cout<<"a matrix szimmetrikus";
+    }else{cout<<"a matrix nem szimmetrikus";}
+    return 0;
+}
