@@ -8,7 +8,7 @@ int main()
     ifstream in("input.txt");
     in>>n;
     for(i=0;i<n;i++){
-        for(j=0;j<n;i++){
+        for(j=0;j<n;j++){
             in>>a[i][j];
         }
     }
