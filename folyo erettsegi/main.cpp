@@ -1,10 +1,18 @@
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    //matrix beolvasas filebol
+    int i,j,n,a[30][30];
+    ifstream in("input.txt");
+    in>>n;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;i++){
+            in>>a[i][j];
+        }
+    }
+    in.close();
     for(i=0;i<n;i++){
         int max=-999;
         int maxoszlop=-1;
